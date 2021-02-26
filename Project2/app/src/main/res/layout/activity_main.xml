@@ -10,8 +10,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Build-A-Cat!"
+        android:text="Welcome to Blind Color Chooser!"
         android:textSize="30dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,86 +32,105 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="234dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="117dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layoutDirection="rtl"
-            android:text="orange"
-            android:textDirection="rtl" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="brown" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:layout_width="234dp"
-        android:layout_height="45dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:max="255"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="117dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textDirection="rtl"
-            android:layoutDirection="rtl"
-            android:text="longhair" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="shorthair" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="234dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/next_button"
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:max="255"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="117dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textDirection="rtl"
-            android:layoutDirection="rtl"
-            android:text="kitten" />
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:max="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
 
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="adult" />
-    </RadioGroup>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Red"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Green"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Blue"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+
+    <TextView
+        android:id="@+id/seek1Text"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/seek2Text"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar2"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/Seek3Text"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar3"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
